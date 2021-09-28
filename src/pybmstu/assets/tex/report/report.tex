@@ -1,12 +1,26 @@
-\documentclass[a4paper,oneside,14pt]{extreport}
+\documentclass[utf8x, 12pt]{G7-32}
 
-\include{preamble}
+\include{preambule.inc}
+\include{listings.inc}
+
 
 \begin{document}
 
-\include{title}
-\include{contents}
-\include{main}
-\include{biblio}
+\frontmatter % выключает нумерацию ВСЕГО; здесь начинаются ненумерованные главы: реферат, введение, глоссарий, сокращения и прочее.
+
+\input{title.tex}
+
+\tableofcontents
+\pagebreak
+
+\input{introduction.tex}
+
+\mainmatter % это включает нумерацию глав и секций в документе ниже
+
+\input{main.tex}
+
+\backmatter % Здесь заканчивается нумерованная часть документа и начинаются ссылки и
+\input{conclusion.tex}
+\input{biblio.tex}
 
 \end{document}
