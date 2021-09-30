@@ -7,7 +7,7 @@ setuptools.setup(
     author="Yorlend, Rull Deef",
     license="MIT",
     description="",
-    long_description=open("README.md", "rt").read(),
+    long_description=open("README.md", "rt", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/RullDeef/pybmstu",
     packages=setuptools.find_packages("src"),
