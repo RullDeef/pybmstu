@@ -1,15 +1,26 @@
-import sys
+import click
 from pybmstu import tex
 
+@click.group("cli")
+def cli():
+    pass
 
-def print_usage():
-    print("usage: just use it")
+@cli.command("tex")
+@click.argument("type")
+def cmd_tex(type):
+    """Generates texdoc from template.
 
+    TYPE can be one of "report", "lab", "paper" or "rpz".
+    """
+    
+    if type in ("report", "lab"):
+        tex.gen_report()
+        click.echo("report generated")
+    elif type in ("paper", "rpz"):
+        tex.gen_paper()
+        click.echo("paper generated")
+    else:
+        raise click.BadParameter(f"'{type}' is not valid texdoc type")
 
-def main() -> int:
-    if len(sys.argv) > 1:
-        if sys.argv[1] in ("tex", "latex"):
-            return tex.tex_runner(sys.argv[2:])
-
-    print_usage()
-    return -1
+if __name__ == "__main__":
+    cli()

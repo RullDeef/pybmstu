@@ -15,29 +15,31 @@
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
+\renewcommand{\ttdefault}{cmtt}
 
 % Значения по умолчанию
 \lstset{
-  % подсветка синтаксиса
-  backgroundcolor=\color{backcolour},   
-  commentstyle=\color{codegreen},
-  keywordstyle=\color{magenta},
-  numberstyle=\tiny\color{codegray},
-  stringstyle=\color{codepurple},
-  basicstyle= \footnotesize,
-  breakatwhitespace=true,% разрыв строк только на whitespacce
-  breaklines=true,       % переносить длинные строки
-%   captionpos=b,          % подписи снизу -- вроде не надо
-  inputencoding=koi8-r,
-  numbers=left,          % нумерация слева
-  numberstyle=\footnotesize,
-  showspaces=false,      % показывать пробелы подчеркиваниями -- идиотизм 70-х годов
-  showstringspaces=false,
-  showtabs=false,        % и табы тоже
-  stepnumber=1,
-  tabsize=4,              % кому нужны табы по 8 символов?
-  frame=single,
-  escapeinside={(*}{*)}, %выделение
+	% подсветка синтаксиса
+	backgroundcolor=\color{white},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{blue},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle= \footnotesize\ttfamily\bfseries,
+	basewidth={.5em,0.5em},
+	breakatwhitespace=true,% разрыв строк только на whitespacce
+	breaklines=true,       % переносить длинные строки
+	% captionpos=b,          % подписи снизу -- вроде не надо
+	inputencoding=utf8, %koi8-r,
+	numbers=left,          % нумерация слева
+	numberstyle=\footnotesize,
+	showspaces=false,      % показывать пробелы подчеркиваниями
+	showstringspaces=false,
+	showtabs=false,        % и табы тоже
+	stepnumber=1,
+	tabsize=4,              % кому нужны табы по 8 символов?
+	frame=single,
+	escapeinside={(*}{*)}, %выделение
   literate={а}{{\selectfont\char224}}1
   {б}{{\selectfont\char225}}1
   {в}{{\selectfont\char226}}1
